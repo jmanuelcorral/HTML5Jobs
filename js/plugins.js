@@ -1,4 +1,3 @@
-//Plugin para slide-toggle menu en la mediaquery de mobile
 jQuery(document).ready(function($){
 
 	/* prepend menu icon */
