@@ -1,0 +1,78 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<title>HTML5jobs - Portal de Empleo </title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="Portal de Ofertas de Empleo HTML5">
+<meta name="author" content="Curso HTML 5">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8">
+<link href="style_mobile.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8">
+<link href="style_tablets.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8">
+<script src="js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+	<body>
+		<!-- begin wrapper -->
+		<div id="wrapper">
+		<!-- begin header -->
+		<header>
+			<div id="logo">
+				<span id="siteName"><a href="./"><span>HTML5</span></a></span>
+				<span id="siteTagline">jobboard</span>
+			</div>
+			<nav>
+				<ul>
+				<li>Jobs</li>
+				<li>Companies</li>
+				<li>Events</li>
+			</ul>
+			</nav>
+		</header>
+		<!-- / header -->
+		<!-- page content -->
+		<section id="pageContent">
+			<h3> Add a Company </h3>
+			<form>
+					<label for="cname">Company Name</label>
+					<input type="text" id="cname" autofocus />
+					<label for="cdescription">Company Description</label>
+					<input type="text" id="cdescription" />
+					<label for="cemail">Email</label>
+					<input type="email" id="cemail" />
+					<label for="cphone">Phone</label>
+					<input type="tel" id="phone" >
+					<label for="caddress">Adress</label>
+					<input type="text" id="caddress" />
+				<div id="location">
+						<span class="button"><a id="btngeo" href="#">Click here for localize your company in a Map</a></span>
+						<div id="locationmap"></div>
+					</div>
+					<div id="clogo">
+						<fieldset><legend>Company Logo</legend>
+						<div id="loadpanel">
+							<label for="inputfile">Logo file</label><input type="file" id="inputfile" placeholder="Select a file from system"/>
+							<div id="dropzone">or Drag Image File here. </div>
+						</div>
+						<div id="imagepreview">
+							<canvas id="companylogo" />
+						</div>
+					</div>
+				<input type="submit" class="button" id="submitbutton" value="Register Company" />
+			</form>
+		</section><!-- /page content -->
+		<!-- begin footer -->
+		<footer>
+			Curso HTML5 Febrero de 2013
+		</footer>
+		<!-- /footer -->
+		</div><!-- /wrapper -->
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&key=YOUR_API_KEY&sensor=false"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

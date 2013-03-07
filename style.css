@@ -192,6 +192,49 @@ span.button a:hover {
   background: #b9ddff;
 }
 
+#location{
+  text-align: center;
+}
+
+#locationmap{
+ display:hidden;
+ -moz-transition: all 1s ease-out 0s;
+ -webkit-transition: all 1s ease-out 0s;
+ width: 100%;
+ height: 350px;
+}
+
+#imagepreview {
+  display:block;
+}
+
+#companylogo
+{
+  width:320px;
+  height:200px;
+}
+
+#dropzone
+{
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  padding: 1em 0;
+  margin: 1em 0;
+  color: #555;
+  border: 2px dashed #555;
+  border-radius: 7px;
+  cursor: default;
+}
+
+#dropzone.hover
+{
+  color: #f00;
+  border-color: #f00;
+  border-style: solid;
+  box-shadow: inset 0 3px 4px #888;
+}
+
 /* =============================================================================
    Typography
    ========================================================================== */
@@ -248,7 +291,36 @@ strike {
   color: #1b96ce;
 }
 
+#pageContent h3{
+  text-align: left;
+  color: #1b96ce;
+  border-bottom: 1px solid #999;
 
+}
+
+#pageContent{
+  text-align: left;
+}
+
+#pageContent label{
+  display: block;
+  width:600px;
+}
+
+#pageContent input{
+  display: block;
+  width:100%;
+  height: 24px;
+}
+
+#pageContent label{
+  padding-top:10px;
+
+}
+
+fieldset{
+  border: 0px;
+}
 /* =============================================================================
    Images
    ========================================================================== */
