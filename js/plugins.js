@@ -145,9 +145,6 @@ var dragndrop= (function() {
 				filedrag.addEventListener("dragleave", filedraghover, false);
 				filedrag.addEventListener("drop", fileselecthandler, false);
 				filedrag.style.display = "block";
-
-				// remove submit button
-				submitbutton.style.display = "none";
 			}
 			}
 		}
