@@ -1,5 +1,6 @@
 var Offer = function(jobtitle, jobdescription, jobrequirements, jobsalary, incorporationdate) {
 //Propiedades de Offer
+ return null;
 };
 //Creamos offerManager como un Namespace, el truco está hacerlo como un Literal Object vacío
 var offerManager = {};
@@ -24,7 +25,7 @@ offerManager.traceTools = function (offer_info) {
 offerManager.Validation = function(offerdata) {
 	return {
 		fieldsAreNotNull : function(){
-			var isNotNull = true;
+			var isNotNull = false;
 			//Falta comprobar si los campos son o no son null
 			return isNotNull;
 		}
@@ -40,7 +41,7 @@ offerManager.Persistence = function(offer_info) {
 		//Set de los valores del objeto en el Formulario
 	}
 	var saveInServer = function(){
-		//De momento no hay que implementarlo, próxima clase
+		//De momento no hay que implementarlo, ¿próxima clase? ¿node?
 	}
 	return{
 		getter:getFromForm,

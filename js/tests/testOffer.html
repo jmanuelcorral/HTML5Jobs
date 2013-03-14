@@ -19,6 +19,13 @@
 
     function isFilledForm(){
       var isFilled = true;
+	  //Miro si existen los campos
+	  if ($("#jobtitle").length === 0) return false;
+	  if ($("#jobdescription").length === 0) return false;
+	  if ($("#jobrequirements").length === 0) return false;
+	  if ($("#jobsalary").length === 0) return false;
+	  if ($("#incorporationdate").length === 0) return false;
+	  //Compruebo que su valor no es nulo
       isFilled = isFilled && ($("#jobtitle").val()!="");
       isFilled = isFilled && ($("#jobdescription").val()!="");
       isFilled = isFilled && ($("#jobrequirements").val()!="");
@@ -38,7 +45,7 @@
     //Test Instancia Offer
     test( "Test Instancia Offer", function() {
       var value = new Offer("jobtitle", "jobdescription", "jobrequirements", 20000, "incorporationdate");
-      notEqual(value, null, "Comprobamos instancia objeto" );
+      equal(value.jobtitle, "jobtitle", "Comprobamos instancia objeto" );
     });
     //Test Setter Pagina
     test( "Test Offer Setter DOM", function() {
