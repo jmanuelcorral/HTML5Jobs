@@ -16,7 +16,6 @@
 <link href="style.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8">
 <link href="style_mobile.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8">
 <link href="style_tablets.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8">
-<!--<script src="js/libs/modernizr-2.0.6.min.js"></script>-->
 </head>
 	<body>
 		<!-- begin wrapper -->
@@ -41,17 +40,21 @@
 			<h3>Candidate Registration </h3>
 			<form>
 			<label for="candname">Name</label>	
-			<input type="text" name="candname" id="candname" data-bind="value:currentCandidate.name" />		
+			<input type="text" name="candname" id="candname" data-bind="value:name" />		
 			<label for="canddescription">Add Something About you:</label>
-			<input type="text" name="canddescription" id="canddescription" />		
+			<input type="text" name="canddescription" id="canddescription" data-bind="value:currentCandidate.description" />		
 			<label for="candprojects">What kind of projects do you like:</label>
-			<input type="text" name="candprojects" id="candprojects" data-bind="" />		
+			<input type="text" name="candprojects" id="candprojects" data-bind="value:currentCandidate.project_desired" />		
 			<label for="basic">City where do you live:</label>
-			<select id="candgithub" data-bind=""></select>
+			<select id="candgithub" data-bind=" options: currentAvailableCities,
+												optionsText: 'citydistrict',
+												optionsValue: 'cityId',
+    											value: selectedCity,
+    											optionsCaption: 'Choose a City...'"></select>
 			<label for="candlinkedin">linkedin:</label>
-			<input type="text" name="candlinkedin" id="candlinkedin" data-bind="" />		
+			<input type="text" name="candlinkedin" id="candlinkedin" data-bind="value:currentCandidate.linkedin_url" />		
 			<label for="candgithub">Github:</label>
-			<input type="text" name="candgithub" id="candgithub" data-bind="" />		
+			<input type="text" name="candgithub" id="candgithub" data-bind="value:currentCandidate.github" />		
 				
 			<span class="button">
 				<input type="submit" class="button" id="submitbutton" value="Register Candidate" /></span>

@@ -1,4 +1,10 @@
 var candidate ={
+	name:"", 
+	description:"",
+	project_desired:"",
+	linkedin_url:"",
+	github:"",
+	city:""
 };
 
 var availableCities = [
@@ -33,13 +39,24 @@ candidateManager.viewModel = {
 	selectedCity : ko.observable("1")
 };
 
+candidateManager.viewModel.selectedCity.subscribe(function (newvalue) {  
+		
+	    candidateManager.viewModel.currentCandidate.city = candidateManager.viewModel.currentAvailableCities[newvalue];  
+});  
+
 candidateManager.traceTools = function (candidate_info) {
 	return {
 		displayCandidateInfoLog : function(){
 			console.log(JSON.stringify(candidate_info));
 		},
 		displayCandidateInfoAlert : function(){
-			alert(JSON.stringify(candidate_info));
+			var cadena = 	"name: " + candidate_info.title + 
+							" description: " + candidate_info.description +
+							" project_desired: " + candidate_info.project_desired +
+							" linkedin_url: " + candidate_info.linkedin_url + 
+							" github: " + candidate_info.github;
+
+			alert(cadena);
 		}
 	};
 };
