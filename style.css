@@ -49,10 +49,33 @@ footer {
   clear: both;
 }
 
+/*Fonts*/
+@font-face
+{
+  font-family: rayaditapizarra;
+  src: url('./fonts/Sketch_Block.ttf');
+}
+
+@font-face
+{
+  font-family: amano;
+  src: url('./fonts/ObjectumSexuality.ttf');
+}
+/*End Fonts */
+
 div#logo
 {
   float:left;
 }
+
+/* =============================================================================
+   Navigation
+   ========================================================================== */
+.menu-icon
+{
+  display: none;
+}
+
 
 span#siteName a {
   display: block;
@@ -94,7 +117,6 @@ span#siteTagline {
 nav ul{
   display:block;
 }
-
 nav ul {
   margin: 0;
   padding: 0;
@@ -130,6 +152,12 @@ nav ul li:hover
   background: #1b96ce;
   color: #FFF;
 }
+
+/*
+nav ul li a.menuselected {
+  color: #F00;
+  text-decoration: none;
+}*/
 
 footer a {
   color: #999;
@@ -242,6 +270,11 @@ img.icon {
   margin: 10px 5px 0 5px;
   border: 0;
 }
+
+
+/* =============================================================================
+   Responsive media queries
+   ========================================================================== */
 
 div.vid {
   position: relative;

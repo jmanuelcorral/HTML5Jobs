@@ -1,0 +1,106 @@
+/* =============================================================================
+   Responsive adjustments
+   ========================================================================== */
+
+/* Tablets and the like */
+
+@media (min-device-width:1024px) and (max-width:989px),  screen and (max-device-width:480px),  (max-device-width:480px) and (orientation:landscape),  (min-device-width:481px) and (max-device-width:1024px) and (orientation:portrait) {
+
+div#wrapper, header, nav, footer {
+  width: 440px;
+}
+
+footer {
+  height: 50px;
+  line-height: 50px;
+}
+
+section {
+  padding: 15px;
+  overflow: hidden;
+}
+
+div.halfPanel {
+  float: none;
+  width: 440px;
+}
+
+nav {
+  height: 40px;
+}
+
+span#siteName a {
+  font-size: 30px;
+  letter-spacing: 0px;
+  margin: 35px 0 15px 20px;
+}
+
+span#siteTagline {
+  font-size: 25px;
+  margin: 0 0 30px 20px;
+}
+
+nav ul li {
+  font-size: 14px;
+  line-height: 42px;
+  margin: 1px 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 26px;
+  line-height: 1.2em;
+  letter-spacing: -0.2px;
+  margin: 0 0 20px 0;
+}
+
+h2 {
+  font-size: 22px;
+  margin: -10px 0 20px 0;
+}
+
+h3, h4, h5, h6 {
+  font-size: 18px;
+  margin: 20px 0 6px 0;
+}
+
+h5, h6 {
+  font-size: 14px;
+}
+
+span.button a {
+  height: 46px;
+  font-size: 15px;
+  line-height: 48px;
+  margin: 20px 0;
+}
+
+header span.button a {
+  float: none;
+  width: 440px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 42px;
+  margin: -10px 0 0 0;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  clear: both;
+}
+
+img {
+  height: 100&;
+  width: 100%;
+}
+
+img.thumb {
+  display: block;
+  width: 408px;
+  height: 189px;
+  border: 1px solid #666;
+}
+
+img.icon {
+  width: 42px;
+  height: 42px;
+}
+
+}/* End */
