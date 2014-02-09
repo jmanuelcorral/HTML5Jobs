@@ -4,16 +4,14 @@ $(document).ready(function(){
 		$("#locationmap").fadeIn();
 	});
 
-	dragndrop.init("inputfile","dropzone","submitbutton");
+	//dragndrop.init("inputfile","dropzone","submitbutton");
 
 	$("#submitbutton").click(function(){
-		var name = $("#cname").val();
-		var desc = $("#cdescription").val();
-		var mail = $("#cemail").val();
-		var phone = $("#cphone").val();
-		var companyinfo = new Company(name, desc, mail, phone);
+		//Construyo un objeto companyinfo y lo relleno;
 		var helper = company_helpers(companyinfo);
-		helper.displayCompanyInfoLog()
+
+		//puedo llamar a cualquiera de estas 2 propiedades
+		//helper.displayCompanyInfoLog()
 		//helper.displayCompanyInfoAlert();
 	});
 });

@@ -1,23 +1,15 @@
 var Company = function(name, description, email, phone){
-	this.name = name;
-	this.description = description;
-	this.email = email;
-	this.phone = phone;
+	//Objeto el cual tendremos que crear sus propiedades
 }
 
 var company_helpers = function (companyinfo) {
 	return {
 		displayCompanyInfoLog : function(){
-			console.log("nombre:" + companyinfo.name);
-			console.log("description:" + companyinfo.description);
-			console.log("email:" + companyinfo.email);
-			console.log("phone:" + companyinfo.phone);
+			//Muestra todas las propiedades del objeto por Consola
+			//puedes usar console.log(variablestring);
 		},
 		displayCompanyInfoAlert : function(){
-			var cadena = 	"nombre: " + companyinfo.name + 
-							" description: " + companyinfo.description +
-							" email: " + companyinfo.email +
-							" phone: " + companyinfo.phone;
+			//var cadena = 	"Cadena donde montaré la info del objeto";
 			alert(cadena);
 		}
 	};
