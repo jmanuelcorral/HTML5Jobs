@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Offer Tests</title>
+  <link rel="stylesheet" href="qunit.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="../jquery.js"></script>
+  <script src="qunit.js"></script>
+
+  <script src="../offer.js"></script>
+  <script>
+    function createObjectsInDOM(){
+      //Esta función Crea los inputs en el DOM
+    };
+
+    function isFilledForm(){
+      var isFilled = true;
+	  //Miro si existen los campos
+	  if ($("#jobtitle").length === 0) return false;
+	  if ($("#jobdescription").length === 0) return false;
+	  if ($("#jobrequirements").length === 0) return false;
+	  if ($("#jobsalary").length === 0) return false;
+	  if ($("#incorporationdate").length === 0) return false;
+	  //Compruebo que su valor no es nulo
+      isFilled = isFilled && ($("#jobtitle").val()!="");
+      isFilled = isFilled && ($("#jobdescription").val()!="");
+      isFilled = isFilled && ($("#jobrequirements").val()!="");
+      isFilled = isFilled && ($("#jobsalary").val()!="");
+      isFilled = isFilled && ($("#incorporationdate").val()!="");
+      return isFilled;
+    };
+
+    function FillForm(){
+      //Esta función rellena los Inputs del DOM
+    };
+
+    function deleteObjectsInDOM(){
+      //Esta Función elimina los objects en el DOM
+    };
+
+    //Test Instancia Offer
+    test( "Test Instancia Offer", function() {
+      var value = new Offer("jobtitle", "jobdescription", "jobrequirements", 20000, "incorporationdate");
+      equal(value.jobtitle, "jobtitle", "Comprobamos instancia objeto" );
+    });
+    //Test Setter Pagina
+    test( "Test Offer Setter DOM", function() {
+      var inicial = new Offer("jobtitle", "jobdescription", "jobrequirements", 20000, "incorporationdate");
+      //Creamos los campos en el documento
+      createObjectsInDOM();
+      //Preparamos los sistemas de persistencia de la pagina
+      offerManager.Persistence(inicial).setter();
+      //Comprobamos que los valores están seteados
+      isFilled = isFilledForm();
+      //eliminamos los campos en el documento así el test será unitario
+      deleteObjectsInDOM();
+      equal(isFilled, true, "Comprobamos Pagina rellenada" );
+    });
+
+    //Test Getter Pagina
+    test( "Test Offer Getter DOM", function() {
+      //Creamos los campos en el documento
+      createObjectsInDOM();
+      //Inyectamos valores en la pagina
+      FillForm();
+      //Preparamos los sistemas de persistencia de la pagina
+      var valores_leidos = offerManager.Persistence().getter();
+      //eliminamos los campos en el documento así el test será unitario
+      deleteObjectsInDOM();
+      //Comprobamos que los valores están seteados
+      var isFilled = offerManager.Validation(valores_leidos).fieldsAreNotNull();
+      equal(isFilled, true, "Comprobamos instancia objeto está rellenada" );
+    });
+  </script>
+  <div id="testingzone" style="display:none"></div>
+</body>
+</html>
