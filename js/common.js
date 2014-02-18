@@ -16,24 +16,8 @@ $(document).ready(function(){
 		//helper.displayCompanyInfoAlert();
 		alert(validation.isValid());
 	});
+	
+	ko.applyBindings(candidateManager.viewModel);
 
-	$("#setdata").click(function(){
-		CURRENT_OFFER = offerManager.Persistence().getter();
-		offerManager.traceTools(CURRENT_OFFER).displayOfferInfoLog();
-	});
-
-	$("#getdata").click(function(){
-		if (CURRENT_OFFER != undefined){
-			offerManager.Persistence(CURRENT_OFFER).setter();
-		}
-	});
-
-	$("#removedata").click(function(){
-		$("#jobtitle").val("");
-		$("#jobdescription").val("");
-		$("#jobrequirements").val("");
-		$("#jobsalary").val("");
-		$("#incorporationdate").val("");
-	});
 });
 

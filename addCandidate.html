@@ -1,0 +1,73 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<title>HTML5jobs - Portal de Empleo </title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="Portal de Ofertas de Empleo HTML5">
+<meta name="author" content="Curso HTML 5">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!--
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">-->
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8">
+<link href="style_mobile.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8">
+<link href="style_tablets.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8">
+<!--<script src="js/libs/modernizr-2.0.6.min.js"></script>-->
+</head>
+	<body>
+		<!-- begin wrapper -->
+		<div id="wrapper">
+		<!-- begin header -->
+		<header>
+			<div id="logo">
+				<span id="siteName"><a href="./"><span>HTML5</span></a></span>
+				<span id="siteTagline">jobboard</span>
+			</div>
+			<nav>
+				<ul>
+				<li>Jobs</li>
+				<li>Companies</li>
+				<li>Events</li>
+			</ul>
+			</nav>
+		</header>
+		<!-- / header -->
+		<!-- page content -->
+		<section id="pageContent">
+			<h3>Candidate Registration </h3>
+			<form>
+			<label for="candname">Name</label>	
+			<input type="text" name="candname" id="candname" data-bind="value:currentCandidate.name" />		
+			<label for="canddescription">Add Something About you:</label>
+			<input type="text" name="canddescription" id="canddescription" />		
+			<label for="candprojects">What kind of projects do you like:</label>
+			<input type="text" name="candprojects" id="candprojects" data-bind="" />		
+			<label for="basic">City where do you live:</label>
+			<select id="candgithub" data-bind=""></select>
+			<label for="candlinkedin">linkedin:</label>
+			<input type="text" name="candlinkedin" id="candlinkedin" data-bind="" />		
+			<label for="candgithub">Github:</label>
+			<input type="text" name="candgithub" id="candgithub" data-bind="" />		
+				
+			<span class="button">
+				<input type="submit" class="button" id="submitbutton" value="Register Candidate" /></span>
+			</form>
+			
+		</section><!-- /page content -->
+		<!-- begin footer -->
+		<footer>
+			Curso HTML5 Febrero de 2013
+		</footer>
+		<!-- /footer -->
+		</div><!-- /wrapper -->
+	<script src="js/jquery.js"></script>
+	<!--<script src="js/plugins.js"></script>-->
+	<script src="js/knockout.js"></script>
+	<script src="js/candidate.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>
