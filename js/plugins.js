@@ -44,9 +44,10 @@ var geoplugin = (function(){
         init: function() {
            if (navigator.geolocation) {
 				var timeoutVal = 10 * 1000 * 1000;
-				//Llamada a la api de html5 para obtener la posición,
-				//Mostrarla en el Mapa de Google, y en caso de error, 
-				//Mostrar un error por pantalla. 
+				navigator.geolocation.getCurrentPosition(
+					displayPosition, 
+					displayError,
+					{ enableHighAccuracy: false, timeout: timeoutVal, maximumAge: 0 }
 				);
 			}
 			else {
@@ -61,7 +62,14 @@ var geoplugin = (function(){
 var imageloader = (function(){
 	return {
 		drawimage: function(file){
-			//Codigo que dibuja un file en un canvas
+			var ctx = document.getElementById('companylogo').getContext('2d');
+			var img = new Image;
+			img.src = URL.createObjectURL(file);
+			img.onload = function() {
+				ctx.clearRect (0, 0, 320, 200);
+	    		ctx.drawImage(img,0,0,img.width, img.height);
+	    		//alert('the image is drawn');
+			}
 		}
 	}
 })();
@@ -128,16 +136,15 @@ var dragndrop= (function() {
 				filedrag = document.getElementById(_filedrag),
 				submitbutton = document.getElementById(_submitbutton);
 			// file select
-			//Asignación del evento change del input file
+			fileselect.addEventListener("change", fileselecthandler, false);
 			// is XHR2 available?
 			var xhr = new XMLHttpRequest();
 			if (xhr.upload) {
 				// file drop
-				//Eventos de drag and drop
+				filedrag.addEventListener("dragover", filedraghover, false);
+				filedrag.addEventListener("dragleave", filedraghover, false);
+				filedrag.addEventListener("drop", fileselecthandler, false);
 				filedrag.style.display = "block";
-
-				// remove submit button
-				submitbutton.style.display = "none";
 			}
 			}
 		}

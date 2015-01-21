@@ -10,6 +10,9 @@
 <meta name="description" content="Portal de Ofertas de Empleo HTML5">
 <meta name="author" content="Curso HTML 5">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!--
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">-->
 <link href="style.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8">
 <link href="style_mobile.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8">
 <link href="style_tablets.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8">
@@ -38,13 +41,13 @@
 			<h3> Add a Company </h3>
 			<form>
 					<label for="cname">Company Name</label>
-					<input type="text" id="cname" autofocus />
+					<input type="text" id="cname" required placeholder="Type here the company name" autofocus />
 					<label for="cdescription">Company Description</label>
-					<input type="text" id="cdescription" />
+					<input type="text" id="cdescription" placeholder="Type here the company description" />
 					<label for="cemail">Email</label>
-					<input type="email" id="cemail" />
+					<input type="email" id="cemail" required  placeholder="Type here a valid company email account"/>
 					<label for="cphone">Phone</label>
-					<input type="tel" id="phone" >
+					<input type="tel" id="cphone" / placeholder="Type here a valid phone">
 					<label for="caddress">Adress</label>
 					<input type="text" id="caddress" />
 				<div id="location">
@@ -61,8 +64,10 @@
 							<canvas id="companylogo" />
 						</div>
 					</div>
-				<input type="submit" class="button" id="submitbutton" value="Register Company" />
+			<span class="button">
+				<input type="submit" class="button" id="submitbutton" value="Register Company" /></span>
 			</form>
+			
 		</section><!-- /page content -->
 		<!-- begin footer -->
 		<footer>
@@ -71,8 +76,9 @@
 		<!-- /footer -->
 		</div><!-- /wrapper -->
 		<script src="js/jquery.js"></script>
-		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&key=YOUR_API_KEY&sensor=false"></script>
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBOnuH_52uoZDXbhukwfvZgjksG3e6UO0g&sensor=false"></script>
 		<script src="js/plugins.js"></script>
 		<script src="js/common.js"></script>
+		<script src="js/company.js"></script>
 	</body>
 </html>
