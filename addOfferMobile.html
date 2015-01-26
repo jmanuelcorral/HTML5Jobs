@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>My Page</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0-rc.1/jquery.mobile-1.3.0-rc.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.0-rc.1/jquery.mobile-1.3.0-rc.1.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page">
+	<div data-role="header">
+		<h1>Add HTML5 Job Post</h1>
+	</div><!-- /header -->
+	<div data-role="content">	
+		<label for="basic">Title:</label>
+		<input type="text" name="jobtitle" id="jobtitle" data-mini="true" />		
+		<label for="basic">Description:</label>
+		<input type="text" name="jobdescription" id="jobdescription" data-mini="true" />		
+		<label for="basic">Requirements:</label>
+		<input type="text" name="jobrequirements" id="jobrequirements" data-mini="true" />		
+		<label for="basic">Salary:</label>
+		<input type="text" name="jobsalary" id="jobsalary" data-mini="true" />		
+		<label for="basic">Incorporation Date:</label>
+		<input type="text" name="incorporationdate" id="incorporationdate" data-mini="true" />		
+		<button id="setdata">Set Data in Object</button>
+		<button id="getdata">Get Data from Object</button>
+		<button id="removedata">Clean Form</button>
+	</div><!-- /content -->
+
+</div><!-- /page -->
+	<script src="js/common.js"></script>
+	<script src="js/offer.js"></script>
+</body>
+</html>

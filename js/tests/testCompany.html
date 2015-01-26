@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Company Tests</title>
+  <link rel="stylesheet" href="qunit.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="qunit.js"></script>
+  <script src="../company.js"></script>
+  <script>
+    //Test instancia
+    test( "Test Instancia Company", function() {
+      var value = new Company("name", "description", "email", "phone");
+      notEqual( value, null, "Comprobamos instancia objeto" );
+    });
+    //Test Valido
+    test( "Test Objeto Inválido", function() {
+      var value = company_validation(new Company("name", "description", "email", "phone"));
+      equal( value.isValid(), false, "Comprobamos que el objeto sea válido" );
+    });
+    test( "Test Objeto Válido", function() {
+      var value = company_validation(new Company("name", "description", "email@yomolomazo.com", "phone"));
+      equal( value.isValid(), true, "Comprobamos que el objeto sea válido" );
+    });
+  </script>
+</body>
+</html>
