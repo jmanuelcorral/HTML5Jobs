@@ -14,7 +14,11 @@
   <script src="../offer.js"></script>
   <script>
     function createObjectsInDOM(){
-      //Esta función Crea los inputs en el DOM
+      $('<input>').attr({ 'id': 'jobtitle', 'type':'text'}).appendTo("#testingzone");
+      $('<input>').attr({ 'id': 'jobdescription', 'type':'text'}).appendTo("#testingzone");
+      $('<input>').attr({ 'id': 'jobrequirements', 'type':'text'}).appendTo("#testingzone");
+      $('<input>').attr({ 'id': 'jobsalary', 'type':'text'}).appendTo("#testingzone");
+      $('<input>').attr({ 'id': 'incorporationdate', 'type':'text'}).appendTo("#testingzone");
     };
 
     function isFilledForm(){
@@ -28,11 +32,19 @@
     };
 
     function FillForm(){
-      //Esta función rellena los Inputs del DOM
+      $("#jobtitle").val("Prueba");
+      $("#jobdescription").val("Descripcion de Prueba");
+      $("#jobrequirements").val("Requisitos de Prueba");
+      $("#jobsalary").val("Salario de Prueba");
+      $("#incorporationdate").val("Incorporación de Prueba");
     };
 
     function deleteObjectsInDOM(){
-      //Esta Función elimina los objects en el DOM
+      $("#jobtitle").remove();
+      $("#jobdescription").remove();
+      $("#jobrequirements").remove();
+      $("#jobsalary").remove();
+      $("#incorporationdate").remove();
     };
 
     //Test Instancia Offer
